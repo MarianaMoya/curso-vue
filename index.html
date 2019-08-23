@@ -9,7 +9,14 @@
 		{{ message }}
 		<input v-model="message">
 		<button v-on:click="seen = !seen"> Open/Close</button><!--Si esta true pasa a false y viceversa-->
+		
+		<span v-bind:tittle="message">
+			Hover your mouse over me for a few seconds
+			to see my dynamically bound tittle
+		</span>
 
+		<a v-bind:href="message">Link</a>
+			 
 		<span v-if="seen"> Now you see me</span>
 
 	</div>
