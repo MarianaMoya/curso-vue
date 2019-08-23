@@ -5,6 +5,24 @@
 	<title>Vue Js - Acamica</title>
 </head>
 <body>
+	<div id="app">
+		{{ message }}
+		<input v-model="message">
+		<button v-on:click="seen = !seen"> Open/Close</button><!--Si esta true pasa a false y viceversa-->
 
+		<span v-if="seen"> Now you see me</span>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		var app= new Vue({
+		el: "#app",
+		data: {
+		message: "Hello Vue!",
+		seen: false   
+	}
+	})
+	</script>
 </body>
 </html>
